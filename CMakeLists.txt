@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 # ----------------------------- Configuration -----------------------------
 if(NOT MLX_C_VERSION)
-  set(MLX_C_VERSION 0.6.0)
+  set(MLX_C_VERSION 0.8.0)
 endif()
 
 option(BUILD_SHARED_LIBS "Build mlx C as a shared library" OFF)
@@ -34,8 +34,8 @@ if(MLX_C_USE_SYSTEM_MLX)
 else()
   FetchContent_Declare(
     mlx
-    GIT_REPOSITORY "https://github.com/osaurus-ai/mlx.git"
-    GIT_TAG f9a2b427775acf2165c4928af094ec06e7b1205d)
+    GIT_REPOSITORY "https://github.com/tijs/mlx.git"
+    GIT_TAG ecc27d0b4)
   FetchContent_MakeAvailable(mlx)
 endif()
 
